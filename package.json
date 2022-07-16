@@ -1,0 +1,31 @@
+{
+  "name": "hyper_ui",
+  "version": "1.0.0",
+  "description": "A CSS Library Inspired By Bootstrap And Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanjeetBalamurugan/hyper_ui.git"
+  },
+  "keywords": [
+    "Inspired",
+    "By",
+    "Bootstrap",
+    "And",
+    "Tailwind",
+    "CSS",
+    "Bootstrap",
+    "Clone",
+    "Tailwind",
+    "Clone"
+  ],
+  "author": "Sanjeet Balamurugan",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/SanjeetBalamurugan/hyper_ui/issues"
+  },
+  "homepage": "https://github.com/SanjeetBalamurugan/hyper_ui#readme"
+}
