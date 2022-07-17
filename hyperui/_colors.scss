@@ -1,0 +1,27 @@
+@each $key, $val in $colors {
+  :root {
+    --#{$prefix}-#{$key}: #{$val};
+  }
+
+  .text-#{$key} {
+    color: var(--#{$prefix}-#{$key});
+  }
+  .text-hover-#{$key} {
+    &:hover {
+      color: var(--#{$prefix}-#{$key});
+    }
+  }
+  .bg-#{$key} {
+    background-color: var(--#{$prefix}-#{$key});
+  }
+  .text-muted {
+    //slate 400
+    color: var(--font-weight-slate-400);
+  }
+}
+
+.shadow {
+  box-shadow: $base-box-shadow;
+}
+
+// &:nth-child, &:active, &:visited, &:last-child etc

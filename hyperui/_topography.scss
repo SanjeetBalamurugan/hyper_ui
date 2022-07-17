@@ -1,0 +1,74 @@
+// heading
+
+$h-val: 2rem;
+
+// this is a for loop, this loop has a value called $i it cycle form $i = 1 to 7
+
+@for $i from 1 to 7 {
+  // if the i value = 1
+  @if $i == 1 {
+    .h#{$i} {
+      font-size: 2.5rem;
+    }
+    h#{$i} {
+      font-size: 2.5rem;
+    }
+  }
+  //if the i value = 2
+  @else if $i == 2 {
+    .h#{$i} {
+      font-size: $h-val;
+    }
+    h#{$i} {
+      font-size: $h-val;
+    }
+  }
+  // if the those two statements above are false the code in the next line will start
+  @else {
+    .h#{$i} {
+      font-size: $h-val - 0.25rem;
+    }
+    h#{$i} {
+      font-size: $h-val - 0.25rem;
+    }
+    //the h-value is subtracting by 0.25rem
+    $h-val: $h-val - 0.25rem;
+  }
+}
+
+@for $i from 1 to 7 {
+  .display-#{$i} {
+    font-weight: $display-font-weight;
+    font-size: $display-font-size;
+    line-height: $display-line-height;
+  }
+  $display-font-size: $display-font-size - 0.5rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  // zinc 400
+  color: #a1a1aa;
+}
+
+// $topography: (
+
+// );
+
+// @each $property, $map in $topography {
+//   $prefix: map-get($map, "prefix");
+//   $values: map-get($map, "values");
+
+//   @each $k, $v in $values {
+//     @if ($k == "default") {
+//       .#{$prefix} {
+//         #{$property}: $v;
+//       }
+//     } @else {
+//       .#{$prefix}-#{$k} {
+//         #{$property}: $v;
+//       }
+//     }
+//   }
+// }

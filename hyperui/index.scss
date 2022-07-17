@@ -1,0 +1,93 @@
+// variables and functions
+@import "variables";
+@import "functions";
+
+//colors
+@import "colors";
+:root {
+  // spacing
+  --#{$prefix}-base-padding: #{$base-padding};
+  --#{$prefix}-base-margin: #{$base-margin};
+
+  //content or topography
+  --#{$prefix}-headings-line-height: #{$headings-line-height};
+  --#{$prefix}-display-font-weight: #{$display-font-weight};
+  --#{$prefix}-display-line-height: #{$display-line-height};
+  --#{$prefix}-display-font-size: #{$display-font-size};
+
+  //borders
+  --#{$prefix}-base-border-thickness: #{$base-border-thickness};
+  --#{$prefix}-base-border-radius: #{$base-border-radius};
+
+  //box shadow
+  --#{$prefix}-base-box-shadow: #{$base-box-shadow};
+
+  // font weight
+  --#{$prefix}-base-font-weight: #{$base-font-weight};
+  --#{$prefix}-font-weight-200: #{$font-weight-200};
+  --#{$prefix}-font-weight-300: #{$font-weight-300};
+  --#{$prefix}-font-weight-400: #{$font-weight-400};
+  --#{$prefix}-font-weight-500: #{$font-weight-500};
+  --#{$prefix}-font-weight-600: #{$font-weight-600};
+  --#{$prefix}-font-weight-700: #{$font-weight-700};
+  --#{$prefix}-font-weight-800: #{$font-weight-800};
+  --#{$prefix}-font-weight-900: #{$font-weight-900};
+
+  //  font sizes
+  --#{$prefix}-base-font-size: #{$base-font-size};
+  --#{$prefix}-font-size-sm: #{$font-size-sm};
+  --#{$prefix}-font-size-lg: #{$font-size-lg};
+  --#{$prefix}-font-size-xl: #{$font-size-xl};
+  --#{$prefix}-font-size-xxl: #{$font-size-xxl};
+}
+
+//utilities
+@import "utilities";
+
+@import "breakpoints";
+
+//grid
+@import "grid";
+
+// base
+@import "base";
+
+//components
+@import "components/navbar";
+
+//content
+@import "topography";
+
+.text-primary {
+  color: $primary;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-error {
+  color: $error;
+}
+
+.text-info {
+  color: $info;
+}
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
+
+.bg-error {
+  background-color: $error;
+}
+
+.bg-info {
+  background-color: $info;
+}
+
+// css var for easy customizing

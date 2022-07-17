@@ -2,9 +2,9 @@
   "name": "hyper_ui",
   "version": "1.0.0",
   "description": "A CSS Library Inspired By Bootstrap And Tailwind CSS",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "gulp"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,10 @@
   "bugs": {
     "url": "https://github.com/SanjeetBalamurugan/hyper_ui/issues"
   },
-  "homepage": "https://github.com/SanjeetBalamurugan/hyper_ui#readme"
+  "homepage": "https://github.com/SanjeetBalamurugan/hyper_ui#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.53.0"
+  }
 }
