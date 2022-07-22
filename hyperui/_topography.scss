@@ -36,6 +36,17 @@ $h-val: 2rem;
   }
 }
 
+.mark,
+mark {
+  padding: 0.1875em;
+  background-color: var(--hui-yellow-400);
+}
+
+.small,
+small {
+  font-size: 0.875em;
+}
+
 @for $i from 1 to 7 {
   .display-#{$i} {
     font-weight: $display-font-weight;
@@ -52,23 +63,88 @@ $h-val: 2rem;
   color: #a1a1aa;
 }
 
-// $topography: (
+$topography: (
+  "text-decoration": (
+    "prefix": "text-decoration",
+    "values": (
+      "underline": underline,
+      "line-through": line-through,
+    ),
+  ),
+);
 
-// );
+.initialism {
+  font-size: 0.875em;
+  text-transform: uppercase;
+}
 
-// @each $property, $map in $topography {
-//   $prefix: map-get($map, "prefix");
-//   $values: map-get($map, "values");
+.initialism::after {
+  display: block;
+  clear: both;
+  content: "";
+}
 
-//   @each $k, $v in $values {
-//     @if ($k == "default") {
-//       .#{$prefix} {
-//         #{$property}: $v;
-//       }
-//     } @else {
-//       .#{$prefix}-#{$k} {
-//         #{$property}: $v;
-//       }
-//     }
-//   }
-// }
+%blockquote {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+blockquote,
+.blockquote {
+  @extend %blockquote;
+}
+
+figure {
+  blockquote,
+  .blockquote {
+    @extend %blockquote;
+  }
+  figcaption.blockquote-footer {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875em;
+    color: var(--hui-stone-400);
+  }
+  figcaption.blockquote-footer::before {
+    content: "- ";
+  }
+  cite {
+    font-style: italic;
+  }
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  .list-inline-item:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+  .list-inline-item {
+    display: inline-block;
+  }
+}
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
+
+@each $property, $map in $topography {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if ($k == "default") {
+      .#{$prefix} {
+        #{$property}: $v;
+      }
+    } @else {
+      .#{$prefix}-#{$k} {
+        #{$property}: $v;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.alert {
+  position: relative;
+  padding: var(--hui-alert-padding-y) var(--hui-alert-padding-x);
+  margin-bottom: var(--hui-alert-margin-bottom);
+  color: var(--hui-alert-color);
+  background-color: var(--hui-alert-bg);
+  border: var(--hui-alert-border);
+  border-radius: var(--hui-alert-border-radius, 0);
+}
+
+$alert: (
+  "background-color": (
+    "prefix": "alert",
+    "values": (
+      "primary": var(--hui-primary),
+      "secondary": var(--hui-secondary),
+      "success": var(--hui-success),
+      "danger": var(--hui-error),
+      "warning": var(--hui-warning),
+      "info": var(--hui-info),
+      "light": var(--hui-light),
+      "dark": var(--hui-dark),
+    ),
+  ),
+);
+
+@each $property, $map in $alert {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if ($k == "default") {
+      .#{$prefix} {
+        #{$property}: $v;
+      }
+    } @else {
+      .#{$prefix}-#{$k} {
+        #{$property}: $v;
+      }
+    }
+  }
+}

@@ -39,6 +39,24 @@
   --#{$prefix}-font-size-lg: #{$font-size-lg};
   --#{$prefix}-font-size-xl: #{$font-size-xl};
   --#{$prefix}-font-size-xxl: #{$font-size-xxl};
+  --#{$prefix}-alert-bg: #{$alert-bg};
+  --#{$prefix}-alert-padding-x: #{$alert-padding-x};
+  --#{$prefix}-alert-padding-y: #{$alert-padding-y};
+  --#{$prefix}-alert-margin-bottom: #{$alert-margin-bottom};
+  --#{$prefix}-alert-color: #{$alert-color};
+  --#{$prefix}-alert-border-color: #{$alert-border-color};
+  --#{$prefix}-alert-border: #{$alert-border};
+  --#{$prefix}-alert-border-radius: #{$alert-border-radius};
+
+  --#{$prefix}-primary: #{$primary};
+  --#{$prefix}-secondary: #{$secondary};
+  --#{$prefix}-error: #{$error};
+  --#{$prefix}-info: #{$info};
+  --#{$prefix}-success: #{$success};
+  --#{$prefix}-warning: #{$warning};
+
+  --#{$prefix}-light: #{$light};
+  --#{$prefix}-dark: #{$dark};
 }
 
 //utilities
@@ -54,40 +72,41 @@
 
 //components
 @import "components/navbar";
+@import "components/alert";
 
 //content
 @import "topography";
 
 .text-primary {
-  color: $primary;
+  color: var(--hui-primary);
 }
 
 .text-secondary {
-  color: $secondary;
+  color: var(--hui-secondary);
 }
 
 .text-error {
-  color: $error;
+  color: var(--hui-error);
 }
 
 .text-info {
-  color: $info;
+  color: var(--hui-info);
 }
 
 .bg-primary {
-  background-color: $primary;
+  background-color: var(--hui-primary);
 }
 
 .bg-secondary {
-  background-color: $secondary;
+  background-color: var(--hui-secondary);
 }
 
 .bg-error {
-  background-color: $error;
+  background-color: var(--hui-error);
 }
 
 .bg-info {
-  background-color: $info;
+  background-color: var(--hui-info);
 }
 
 // css var for easy customizing

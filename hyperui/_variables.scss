@@ -36,6 +36,16 @@ $font-weight-700: $base-font-weight * 7;
 $font-weight-800: $base-font-weight * 8;
 $font-weight-900: $base-font-weight * 9;
 
+// alert
+$alert-bg: transparent;
+$alert-padding-x: 1rem;
+$alert-padding-y: 1rem;
+$alert-margin-bottom: 1rem;
+$alert-color: inherit;
+$alert-border-color: transparent;
+$alert-border: 1px solid $alert-border-color;
+$alert-border-radius: 0.375rem;
+
 //color palette from "Tailwind CSS" https://tailwindcss.com/docs/customizing-colors
 $colors: (
   "slate-50": #f8fafc,
@@ -267,3 +277,8 @@ $primary: #3b82f6 !default;
 $secondary: #22c55e !default;
 $error: #ef4444 !default;
 $info: #facc15 !default;
+$success: #86efac !default;
+$warning: #{$info};
+
+$light: var(--hui-slate-100);
+$dark: var(--hui-zinc-400);

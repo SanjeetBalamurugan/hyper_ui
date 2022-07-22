@@ -248,6 +248,20 @@ $utilities: (
       "unset": unset,
     ),
   ),
+  "text-align": (
+    "prefix": "text",
+    "values": (
+      "left": left,
+      "right": right,
+      "center": center,
+      "end": end,
+      "justify": justify,
+      "start": start,
+      "unset": unset,
+      "inherit": inherit,
+      "initial": initial,
+    ),
+  ),
 );
 
 // generate utility classes
